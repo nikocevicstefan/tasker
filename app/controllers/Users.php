@@ -13,4 +13,8 @@ class Users extends Controller{
 
 		$this->view('users/index', $data);
 	}
+
+	public function register(){
+		$this->view('users/register');
+	}
 }
