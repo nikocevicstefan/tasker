@@ -32,7 +32,6 @@ class User
 		$this->db->bind(':password', $userData['password']);
 
 		$this->db->execute();
-		redirect('users');
 	}
 
 	public function login($userData)
@@ -46,7 +45,6 @@ class User
 		$loggedUser = $this->db->single();
 		if ($this->db->rowCount()) {
 			$_SESSION['user'] = $loggedUser->id;
-			var_dump($_SESSION['user']);
 		} else {
 			echo "No user found";
 		}

@@ -13,6 +13,6 @@ function authUser(){
     }
 }
 
-function loggedOut(){
+function sessionLogOut(){
     unset($_SESSION['user']);
 }

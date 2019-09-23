@@ -20,7 +20,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="/tasks">Tasks<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
@@ -30,7 +30,7 @@
 						<a class="nav-link" href="#">Profile</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+						<a class="nav-link" href="/users/logout" >Logout</a>
 					</li>
 				</ul>
 			</div>

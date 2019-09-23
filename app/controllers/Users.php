@@ -20,9 +20,16 @@ class Users extends Controller{
 
 	public function storeUser(){
 		 $this->users->register($_POST);
+		 redirect('users');
 	}
 
 	public function login(){
 		$this->users->login($_POST);
+		redirect('users');
+	}
+
+	public function logout(){
+		sessionLogOut();
+		redirect('users');
 	}
 }
