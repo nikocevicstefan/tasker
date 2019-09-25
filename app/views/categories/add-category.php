@@ -5,7 +5,7 @@
 	<form action="/categories/store" method="POST">
 		<div class="card-body">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Add Category" name="categoryTitle">
+				<input type="text" class="form-control" placeholder="Add Category" name="title">
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Add</button>

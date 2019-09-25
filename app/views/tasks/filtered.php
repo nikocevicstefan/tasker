@@ -7,19 +7,20 @@
         </div>
         <div class="col-6">
             <?php $categories = array();
-           
             foreach ($data as $category) {
                 array_push($categories, $category['category_id']);
             }
             $categories = array_unique($categories);
             ?>
+
             <div class="btn-group">
                 <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Category
                 </button>
                 <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/tasks/index">All</a>
                     <?php foreach ($categories as $key): ?>
-                        <a class="dropdown-item" href="/tasks/filter/<?php echo $key;?>"><?php echo $key; ?></a>
+                        <a class="dropdown-item" href="/tasks/filter/<?php echo $key; ?>"><?php echo $key; ?></a>
                     <?php endforeach; ?>
                 </div>
             </div>

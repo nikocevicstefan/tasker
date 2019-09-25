@@ -1,11 +1,24 @@
 <?php
 
 class Categories extends Controller{
+	private $categories;
+
+	public function __construct(){
+		$this->categories = $this->model('Category');
+	}
+
 	public function index(){
-		$this->view('categories/index');
+		$categories = $this->categories->getCategories();
+		$this->view('categories/index', $categories);
 	}
 
 	public function create(){
 		$this->view('categories/add-category');
+	}
+
+	public function store(){
+		$this->categories->store($_POST);
+
+		redirect('categories/index');
 	}
 }

@@ -35,4 +35,5 @@
 				</ul>
 			</div>
 		</nav>
-	</header>	
+	</header>
+	<div class="container">	

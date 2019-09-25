@@ -1,9 +1,8 @@
-<?php require APP_ROOT . '/views/inc/header.php'; 
+<?php
 
 if(empty($_SESSION['user'])){
-	require 'login.php';
+	redirect('users/login');
 }else{
-	require 'dashboard.php';
+	redirect('users/dashboard');
 }
 
-require APP_ROOT . '/views/inc/footer.php'; ?>

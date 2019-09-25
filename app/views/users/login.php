@@ -1,6 +1,8 @@
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
+
 <div class="card form-card" style="width: 18rem;">
 	<h1 class="transparent-header">Login</h1>
-	<form action="/users/login" method="POST">
+	<form action="/users/loginUser" method="POST">
 		<div class="card-body">
 			<div class="form-group">
 				<input type="text" placeholder="Enter username" id="username" name="username" class="form-control">
@@ -17,3 +19,5 @@
 		</div>
 	</form>
 </div>
+
+<?php require APP_ROOT . '/views/inc/footer.php'; ?>
