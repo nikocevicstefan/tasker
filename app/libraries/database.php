@@ -83,7 +83,7 @@ class Database
 	public function single()
 	{
 		$this->execute();
-		$singleRecord = $this->stmt->fetch(PDO::FETCH_OBJ);
+		$singleRecord = $this->stmt->fetch();
 		return $singleRecord;
 	}
 

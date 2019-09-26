@@ -7,8 +7,9 @@
 			<div class="form-group">
 				<input type="text" class="form-control" placeholder="Add Category" name="title">
 			</div>
-			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Add</button>
+			<div class="form-group" style="display:flex; justify-content: space-between;">
+				<a href="/categories/index" class="btn btn-warning">Cancel</a>
+				<button type="submit" class="btn btn-info">Add</button>
 			</div>
 		</div>
 	</form>

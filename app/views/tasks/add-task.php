@@ -21,8 +21,9 @@
 					 ?>
 				</select>
 			</div>
-			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Submit</button>
+			<div class="form-group" style="display:flex; justify-content: space-between;">
+				<a href="/tasks/index" class="btn btn-warning">Cancel</a>	
+				<button type="submit" class="btn btn-info">Submit</button>
 			</div>		
 		</form>
 	</div>

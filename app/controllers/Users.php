@@ -29,12 +29,9 @@ class Users extends Controller{
 
 	public function loginUser(){
 		$this->users->login($_POST);
-		redirect('users');
+		redirect('tasks/index');
 	}
 
-	public function dashboard(){
-		$this->view('users/dashboard');
-	}
 
 	public function logout(){
 		sessionLogOut();

@@ -1,7 +1,7 @@
 <?php require_once APP_ROOT . '/views/inc/header.php'; ?>
 
-<div class="container mt-4">
-    <a href="/categories/create" class="btn btn-light">Add Category</a>
+<div class="container mt-4" style="text-align: center;">
+<a href = "/categories/create" class="btn btn-outline-warning">Add Category <i class="fas fa-plus"></i></a>
 </div>
 
 <div class="row mt-4 display-grid">
@@ -11,6 +11,7 @@
                 <!-- <img class="card-img-top" src="https://placehold.it/280x140/abc" alt="Card image cap"> -->
                 <div class="card-body display-card">
                     <h5 class="card-title"><?php echo $category['title']; ?></h5>
+                    <a href="/categories/delete/<?php echo $category['id'];?>" class="btn btn-sm btn-warning">delete</a>
                 </div>
             </div>
         </div>

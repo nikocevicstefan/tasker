@@ -44,7 +44,7 @@ class User
 
 		$loggedUser = $this->db->single();
 		if ($this->db->rowCount()) {
-			$_SESSION['user'] = $loggedUser->id;
+			$_SESSION['user'] = $loggedUser['id'];
 		} else {
 			echo "No user found";
 		}

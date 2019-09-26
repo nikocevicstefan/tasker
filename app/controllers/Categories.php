@@ -21,4 +21,9 @@ class Categories extends Controller{
 
 		redirect('categories/index');
 	}
+
+	public function delete($id){
+		$this->categories->delete($id);
+		redirect('categories/index');
+	}
 }

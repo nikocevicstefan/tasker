@@ -21,13 +21,12 @@ class Task {
         return $tasks;
     }
 
-    public function getTasksByCategory($category){
-
-        $sql = "SELECT * FROM tasks WHERE category_id = :category_id";
+    public function getTask($id){
+        $sql = "SELECT * FROM tasks WHERE id = :id";
         $this->db->query($sql);
-        $this->db->bind(':category_id', $category);
-        $results = $this->db->resultSet();
-        return $results;
+        $this->db->bind(':id', $id);
+        $task = $this->db->single();
+        return $task;
     }
 
     public function store($taskData){
@@ -40,6 +39,23 @@ class Task {
         $this->db->bind(':body', $taskData['body']);
         $this->db->bind(':category_id', $taskData['category']);
         
+        $this->db->execute();
+    }
+
+    public function update($task){
+        $sql = "UPDATE tasks SET title = :title, body = :body, category_id = :category_id WHERE id = :task_id";
+        $this->db->query($sql);
+        $this->db->bind(':task_id', $task['id']);
+        $this->db->bind(':title', $task['title']);
+        $this->db->bind(':body', $task['body']);
+        $this->db->bind(':category_id', $task['category']);
+        $this->db->execute();
+    }
+
+    public function delete($id){
+        $sql = "DELETE FROM tasks WHERE id = :id";
+        $this->db->query($sql);
+        $this->db->bind(':id', $id);
         $this->db->execute();
     }
 }

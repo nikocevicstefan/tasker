@@ -10,12 +10,14 @@
 			<div class="form-group">
 				<input type="password" id="password" placeholder="Enter Password" name="password" class="form-control">
 			</div>
-			<button type="submit" class="btn btn-primary">Login</button>
-		</div>
-		<div>
-			<a href="users/register" style="text-align: center;">
-				<h6>No account? Register.</h6>
-			</a>
+			<div class="form-group" style="text-align: center">
+				<button type="submit" class="btn btn-info" style="width:100%">Login</button>
+			</div>
+			<div>
+				<a href="/users/register" style="text-align: center;">
+					<h6>No account? Register.</h6>
+				</a>
+			</div>
 		</div>
 	</form>
 </div>

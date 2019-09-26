@@ -3,6 +3,6 @@
 if(empty($_SESSION['user'])){
 	redirect('users/login');
 }else{
-	redirect('users/dashboard');
+	redirect('tasks/index');
 }
 

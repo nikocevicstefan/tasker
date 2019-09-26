@@ -23,4 +23,11 @@ class Category{
         $this->db->bind(':title', strtolower($category['title']));
         $this->db->execute();
     }
+
+    public function delete($id){
+        $sql = "DELETE FROM categories WHERE id = :id";
+        $this->db->query($sql);
+        $this->db->bind('id', $id);
+        $this->db->execute();
+    }
 }
