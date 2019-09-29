@@ -1,6 +1,10 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
-<div class="card form-card" style="width: 18rem;">
+
+<div class="row register-page">
+	<div class="col-md-6">
+		
+	<div class="card form-card" style="width: 60%;">
 	<h1 class="transparent-header">Register</h1>
 	<form action="/users/storeUser" method="POST">
 		<div class="card-body">
@@ -30,5 +34,15 @@
 		</div>
 	</form>
 </div>
+
+	</div>
+	<div class="col-md-6">
+		<img src="<?php echo URL_ROOT . '/img/mockups/mockup2.png' ?>" style="width: 100%;" />
+	</div>
+</div>
+
+
+
+
 
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

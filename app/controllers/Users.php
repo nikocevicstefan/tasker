@@ -32,7 +32,10 @@ class Users extends Controller{
 		redirect('tasks/index');
 	}
 
-
+	public function profile(){
+		$this->view('users/profile');
+	}
+	
 	public function logout(){
 		sessionLogOut();
 		redirect('users');

@@ -22,6 +22,16 @@ class Categories extends Controller{
 		redirect('categories/index');
 	}
 
+	public function edit($category){
+		$category = $this->categories->getCategory($category);
+		$this->view('categories/edit-category', $category);
+	}
+
+	public function update(){
+		$this->categories->update($_POST);
+		redirect('categories/index');
+	}
+
 	public function delete($id){
 		$this->categories->delete($id);
 		redirect('categories/index');

@@ -27,7 +27,7 @@ $categories = $data['categories'];
 				</select>
 			</div>
 			<div class="form-group" style="display:flex; justify-content: space-between;">
-				<a href="/tasks/index ?>" class="btn btn-warning">Cancel</a>
+				<a href="/tasks/index" class="btn btn-warning">Cancel</a>
 				<button type="submit" class="btn btn-info">Submit</button>
 			</div>
 	</form>

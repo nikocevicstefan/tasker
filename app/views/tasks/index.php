@@ -1,7 +1,7 @@
 <?php require_once APP_ROOT . '/views/inc/header.php' ?>
 
 <div class="container mt-4" style="text-align: center;">
-    <a href="/tasks/create" class="btn btn-outline-warning">Add Task <i class="fas fa-plus"></i></a>
+    <a href="/tasks/create" class="btn btn-outline-warning">Add Task</a>
 </div>
 
 <div class="row mt-4 display-grid">
@@ -12,11 +12,11 @@
                 <div class="card-body display-card">
                     <h5 class="card-title"><?php echo $task['title']; ?></h5>
                     <p class="card-text"><?php echo $task['body']; ?></p>
-                    <p class="card-text"><small class="text-muted"><?php echo $task['category_title'] ?></small></p>
+                    <p class="card-text"><small class="text-muted"><?php echo ucwords($task['category_title']); ?></small></p>
                     <hr>
                     <div style="display:flex; justify-content: flex-end;">
-                        <a href="/tasks/edit/<?php echo $task['id']; ?>" class="btn btn-sm btn-info mr-1"><i class="far fa-edit"></i></a>
-                        <a href="/tasks/delete/<?php echo $task['id']; ?>" class="btn btn-sm btn-warning"><i class="far fa-trash-alt"></i></a>
+                        <a href="/tasks/edit/<?php echo $task['id']; ?>" class="btn btn-sm btn-info mr-1"><img class="icon-svg" src=<?php echo URL_ROOT ."/img/icons/edit.svg";?>></a>
+                        <a href="/tasks/delete/<?php echo $task['id']; ?>" class="btn btn-sm btn-warning"><img class="icon-svg" src=<?php echo URL_ROOT ."/img/icons/delete.svg";?>></a>
                     </div>
                 </div>
             </div>
