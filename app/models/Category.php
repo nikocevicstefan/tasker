@@ -41,16 +41,28 @@ class Category{
         $this->db->execute();
     }
 
+    protected function getTasksByCategory($id){
+            $sql = "SELECT * FROM Tasks WHERE category_id = :category_id";
+            $this->db->query($sql);
+            $this->db->bind(':category_id', $id);
+            $tasks = $this->db->resultSet();
+
+            return $tasks;
+    }
+
     public function delete($id){
-        $sql = "DELETE categories, tasks
+
+        if($this->getTasksByCategory($id)){
+            $sql = "DELETE categories, tasks
                 FROM categories
                 INNER JOIN tasks
                 ON tasks.category_id = categories.id 
                 WHERE categories.id = :id";
-        
+        }else{
+            $sql = "DELETE FROM categories WHERE id = :id";
+        }
             $this->db->query($sql);
             $this->db->bind(':id', $id);
             $this->db->execute();
-        
     }
 }
