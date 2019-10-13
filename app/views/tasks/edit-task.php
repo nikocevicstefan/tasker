@@ -15,14 +15,16 @@ $categories = $data['categories'];
 			</div>
 			<div class="form-group">
 				<select class="form-control" name="category">
-					<?php foreach ($categories as $category)
+					<?php foreach ($categories as $category) {
 						$id = $category['id'];
-					$taskCategoryId = $task['category_id'];
-					$title = $category['title'];
-					if ($id === $taskCategoryId) {
-						echo "<option value=\"$id\" selected'>$title</option>";
+						$taskCategoryId = $task['category_id'];
+						$title = $category['title'];
+						if ($id === $taskCategoryId) {
+							echo "<option value=\"$id\" selected>$title</option>";
+						} else {
+							echo "<option value=\"$id\">$title</option>";
+						}
 					}
-					echo "<option value=\"$id\">$title</option>";
 					?>
 				</select>
 			</div>

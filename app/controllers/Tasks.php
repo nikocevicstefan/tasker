@@ -27,6 +27,7 @@ class Tasks extends Controller{
 	public function edit($task){
 		$categories = $this->model('Category');
 		$categories = $categories->getCategories();
+		
 		$task = $this->tasks->getTask($task);
 		$this->view('tasks/edit-task', ['categories' => $categories, 'task' => $task]);
 	}
